@@ -166,14 +166,14 @@
         }
 
         .nav-register {
-            font-family: var(--font-sans);
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 13px;
             font-weight: 500;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             padding: 10px 22px;
-            background: var(--espresso);
-            color: var(--parchment);
+            background: linear-gradient(145deg, rgb(59 52 44 / 85%) 0%, rgb(27 26 19 / 95%) 100%);
+            color: #FFFFFF;
             transition: background 0.2s ease;
             border-radius: 4px;
         }
@@ -1950,8 +1950,8 @@
 
         /* ─── FOOTER ────────────────────────────────────────────────── */
         footer {
-            background: linear-gradient(145deg, rgb(59 52 44 / 68%) 0%, rgb(27 26 19 / 82%) 100%);
-            color: var(--parchment);
+            background: linear-gradient(145deg, rgb(59 52 44 / 85%) 0%, rgb(27 26 19 / 95%) 100%);
+            color: white;
             padding: 88px 40px 0px;
         }
 
@@ -2232,6 +2232,26 @@
             .how-grid-wrap::before {
                 display: none;
             }
+
+            footer {
+                padding: 56px 28px 24px;
+            }
+
+            .footer-top {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 36px 24px;
+                padding-bottom: 40px;
+                margin-bottom: 36px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-tagline {
+                max-width: 580px;
+                margin-top: 12px;
+            }
         }
 
         @media (max-width: 960px) {
@@ -2242,11 +2262,6 @@
             .hero-content {
                 padding: 160px 40px 100px;
                 max-width: 100%;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
             }
 
             .how-grid {
@@ -2289,10 +2304,6 @@
             .hero-cta,
             .begin-buttons {
                 flex-direction: column;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
             }
 
             .lamp-scripture-block {
@@ -2375,6 +2386,77 @@
             }
         }
 
+        @media (max-width: 640px) {
+            footer {
+                padding: 42px 20px 24px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px 18px;
+                padding-bottom: 28px;
+                margin-bottom: 24px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-brand-name {
+                font-size: 22px;
+            }
+
+            .footer-tagline {
+                font-size: 14px;
+                line-height: 1.55;
+                margin-top: 10px;
+                max-width: 100%;
+            }
+
+            .footer-col-title {
+                margin-bottom: 14px;
+                font-size: 9.5px;
+            }
+
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+
+            .footer-links a {
+                font-size: 13.5px;
+            }
+
+            .footer-col-connect {
+                grid-column: 1 / -1;
+                padding-top: 8px;
+                border-top: 1px solid rgba(242, 246, 244, 0.08);
+            }
+
+            .footer-social {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 12px 20px;
+                margin-top: 6px;
+            }
+
+            .footer-social a {
+                font-size: 13.5px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                font-size: 11px;
+                line-height: 1.5;
+                padding: 20px 0 24px;
+            }
+
+            .footer-legal {
+                gap: 18px;
+            }
+        }
+
         @media (max-width: 480px) {
             .nav-inner {
                 padding: 0 20px;
@@ -2390,12 +2472,13 @@
 
             .footer-bottom {
                 flex-direction: column;
+                align-items: flex-start;
                 gap: 12px;
-                text-align: center;
+                text-align: left;
             }
 
             .footer-legal {
-                justify-content: center;
+                justify-content: flex-start;
             }
         }
     </style>
@@ -2423,7 +2506,7 @@
                 <li><a href="https://www.theiamproject.com/david-book" target="_blank">New Release</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="#begin" class="nav-register">Begin Assessment</a>
+                <a href="faithQu.html" class="nav-register">Begin Assessment</a>
             </div>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -2437,7 +2520,7 @@
         <a href="https://www.theiamproject.com/executive-page" target="_blank">Executive CNAP</a>
         <a href="#" class="active">Faith CNAP</a>
         <a href="https://www.theiamproject.com/david-book" target="_blank">New Release</a>
-        <a href="#begin" class="mobile-cta">Begin Assessment</a>
+        <a href="faithQu.html" class="mobile-cta">Begin Assessment</a>
     </div>
 
     <!-- HERO — FULL-BLEED IMMERSIVE -->
@@ -2891,13 +2974,13 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-top">
-                <div>
+                <div class="footer-brand">
                     <p class="footer-brand-name">The I AM</p>
                     <p class="footer-brand-sub">Project</p>
                     <p class="footer-tagline">Helping people move from insight into action — in faith, leadership, and
                         life.</p>
                 </div>
-                <div>
+                <div class="footer-col footer-col-nav">
                     <p class="footer-col-title">Navigate</p>
                     <ul class="footer-links">
                         <li><a href="https://www.theiamproject.com/the-i-am-project">Home</a></li>
@@ -2907,7 +2990,7 @@
                         <li><a href="https://www.theiamproject.com/david-book">New Release</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col footer-col-start">
                     <p class="footer-col-title">Get Started</p>
                     <ul class="footer-links">
                         <li><a href="https://www.theiamproject.com/faith-cnap">Begin the Faith CNAP</a></li>
@@ -2916,7 +2999,7 @@
                                 Consultation</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col footer-col-connect">
                     <p class="footer-col-title">Connect</p>
                     <div class="footer-social">
                         <a href="https://www.linkedin.com/in/dgilks/" target="_blank">
